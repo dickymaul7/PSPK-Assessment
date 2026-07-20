@@ -816,3 +816,23 @@ body {
   margin-top: 24px;
   border-top: 1px solid var(--border);
 }
+
+/* --- Brand Logos --- */
+.logo-wrapper {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo {
+  height: 80px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.header-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
