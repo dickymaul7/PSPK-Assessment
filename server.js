@@ -459,6 +459,10 @@ app.post('/api/submit', async (req, res) => {
 });
 
 // Jalankan Server
-app.listen(PORT, () => {
-  console.log(`Server PSPK Readiness Assessment berjalan di http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server PSPK Readiness Assessment berjalan di http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
