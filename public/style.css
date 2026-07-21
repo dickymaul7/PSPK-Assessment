@@ -827,10 +827,9 @@ body {
 }
 
 .hero-logo {
-  height: 85px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+  height: 80px;
+  width: 160px; /* Menentukan lebar tetap agar semua kartu berukuran seragam */
+  object-fit: contain; /* Menjaga agar logo tidak gepeng/terdistorsi */
   border-radius: 12px; /* Membuat bentuk rectangle rounded */
   border: 1px solid var(--border); /* Batas pinggir tipis */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Bayangan lembut */
