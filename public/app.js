@@ -383,7 +383,7 @@ btnConsentPrev.addEventListener('click', () => {
 consentForm.addEventListener('submit', (e) => {
   e.preventDefault();
   if (!consentsData.data) {
-    alert('Anda wajib menyetujui pernyataan penggunaan informasi sebelum mengirimkan assessment.');
+    alert('Anda wajib menyetujui pernyataan penggunaan informasi sebelum mengirimkan kuesioner kesiapan.');
     return;
   }
   
