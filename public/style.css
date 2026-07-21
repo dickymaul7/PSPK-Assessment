@@ -827,15 +827,15 @@ body {
 }
 
 .hero-logo {
-  height: 100px;
+  height: 85px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  border-radius: 16px; /* Membuat bentuk rectangle rounded */
+  border-radius: 12px; /* Membuat bentuk rectangle rounded */
   border: 1px solid var(--border); /* Batas pinggir tipis */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Bayangan lembut */
   background-color: #ffffff; /* Latar belakang putih bersih */
-  padding: 12px 24px; /* Memberikan ruang udara di sekeliling logo */
+  padding: 10px 18px; /* Memberikan ruang udara di sekeliling logo */
 }
 
 .header-logo {
