@@ -273,7 +273,7 @@ app.post('/api/submit', async (req, res) => {
 
     // WhatsApp CTA Config
     const waNumber = process.env.WHATSAPP_NUMBER || '6281234567890';
-    const waText = `Halo FS Institute, saya ingin berkonsultasi mengenai hasil PSPK Organizational Readiness Assessment perusahaan kami (${company}).\n\nDetail Hasil:\n- Nama: ${name}\n- Jabatan/Divisi: ${jobTitle} / ${division}\n- Kesiapan Total: ${totalPercentage}% (${readinessLevel})\n\nRincian Dimensi:\n1. Leadership & Governance: ${dimensionPercentages.governance}%\n2. Risk & Strategic Integration: ${dimensionPercentages.strategy}%\n3. Data Readiness: ${dimensionPercentages.dataReadiness}%\n4. Internal Control & Assurance: ${dimensionPercentages.assurance}%\n5. People & Roadmap: ${dimensionPercentages.roadmap}%\n\nDukungan Utama yang Kami Butuhkan: ${neededSupport}\nRencana Mulai: ${timeline}\n\nMohon informasi jadwal diskusi evaluasi gratis dengan tim ahli FS Institute. Terima kasih!`;
+    const waText = `Halo FS Institute, saya ingin berkonsultasi mengenai hasil Kuesioner Kesiapan Organisasi PSPK perusahaan kami (${company}).\n\nDetail Hasil:\n- Nama: ${name}\n- Jabatan/Divisi: ${jobTitle} / ${division}\n- Kesiapan Total: ${totalPercentage}% (${readinessLevel})\n\nRincian Dimensi:\n1. Leadership & Governance: ${dimensionPercentages.governance}%\n2. Risk & Strategic Integration: ${dimensionPercentages.strategy}%\n3. Data Readiness: ${dimensionPercentages.dataReadiness}%\n4. Internal Control & Assurance: ${dimensionPercentages.assurance}%\n5. People & Roadmap: ${dimensionPercentages.roadmap}%\n\nDukungan Utama yang Kami Butuhkan: ${neededSupport}\nRencana Mulai: ${timeline}\n\nMohon informasi jadwal diskusi evaluasi gratis dengan tim ahli FS Institute. Terima kasih!`;
     const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
 
     // Mengirim Email Laporan
@@ -330,13 +330,13 @@ app.post('/api/submit', async (req, res) => {
       <body>
         <div class="container">
           <div class="header">
-            <h1>PSPK Organizational Readiness Report</h1>
-            <p>FS Institute Assessment Center</p>
+            <h1>Laporan Kesiapan Organisasi PSPK</h1>
+            <p>FS Institute Kuesioner Kesiapan</p>
           </div>
           <div class="content">
             <div class="welcome">
               Kepada Yth. Bapak/Ibu <strong>${name}</strong>,<br><br>
-              Terima kasih telah mengisi <strong>PSPK Organizational Readiness Assessment</strong> yang diselenggarakan oleh FS Institute. Berikut adalah laporan analisis awal tingkat kesiapan organisasi Anda (<strong>${company}</strong>) terhadap kewajiban pengungkapan keberlanjutan PSPK 1 dan PSPK 2:
+              Terima kasih telah mengisi <strong>Kuesioner Kesiapan Organisasi PSPK</strong> yang diselenggarakan oleh FS Institute. Berikut adalah laporan analisis awal tingkat kesiapan organisasi Anda (<strong>${company}</strong>) terhadap kewajiban pengungkapan keberlanjutan PSPK 1 dan PSPK 2:
             </div>
             
             <div class="score-box">
@@ -428,7 +428,7 @@ app.post('/api/submit', async (req, res) => {
       await transporter.sendMail({
         from: `"${process.env.EMAIL_FROM_NAME || 'FS Institute Center'}" <${process.env.EMAIL_FROM}>`,
         to: email,
-        subject: `[Laporan Kesiapan] PSPK Organizational Readiness Assessment - ${company}`,
+        subject: `[Laporan Kesiapan] Kuesioner Kesiapan Organisasi PSPK - ${company}`,
         html: htmlEmail,
       });
 
